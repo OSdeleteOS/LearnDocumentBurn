@@ -19,23 +19,23 @@ In order to use *Active Directory*, we must use *Windows Server*. For this examp
 
    <img src="Assets/A4.PNG" width=750>
   
-5. At least *60 GB's* needed. 
+5. At least *60 GB's* needed.
 
    <img src="Assets/A5.PNG" width=750>
   
-6. 
+6. Click *Finish*
 
    <img src="Assets/A6.PNG" width=750>
-  
-7.
+   
+7. Now go to the Windows Server VM settings and change the CD/DVD to use the Windows Server ISO 
+
+   <img src="Assets/A9.PNG" width=750>
+   
+8. Go to the Windows Server VM location and edit the vmx file, change firmware to bios 
 
    <img src="Assets/A7.PNG" width=750>
   
-8.
-
-   <img src="Assets/A9.PNG" width=750>
-  
-9.
+9. Power your Windows Server VM on 
 
    <img src="Assets/A8.PNG" width=750>
   
