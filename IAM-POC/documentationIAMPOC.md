@@ -11,30 +11,30 @@ VM2 (End-user) - *Ubuntu 22.04* w/ graphical interface
 VM3 (AD Domain Services) - *Windows Server 2019*  w/ graphical interface
 
 ## Virtual Machine 1 Setup (Keycloak Server)
-1. This virtual machine will be using *Ubuntu 22.04* CLI. The ISO can be downloaded from the [Ubuntu website](https://releases.ubuntu.com/jammy/).
+1. This virtual machine will be using *Ubuntu 22.04* CLI. The ISO can be downloaded from the [Ubuntu website](https://releases.ubuntu.com/jammy/)
 
-<img src="Images/C1.PNG" width=750>
+   <img src="Images/C1.PNG" width=750>
 
 2. Once installation is complete you can create a new virtual machine on VMware by selecting *Player* and then *New Virtual Machine*
 
-<img src="Images/A1.PNG" width=750>
+   <img src="Images/A1.PNG" width=750>
 
-3. 
+3. Choose *Installer dis image file (iso)* and find path of *Ubuntu Server* ISO
 
-<img src="Images/C2.PNG" width=750>
+   <img src="Images/C2.PNG" width=750>
 
-4.
+4. Create username, full name and password
 
-<img src="Images/C3.PNG" width=750>
+   <img src="Images/C3.PNG" width=750>
 
-5.
+5. Name VM to Keycloak-Server, and pick a file location that has room for 20GB
 
-<img src="Images/C4.PNG" width=750>
+   <img src="Images/C4.PNG" width=750>
 
-6.
+6. Make sure its at least 20GB's for the maximum disk size
 
-<img src="Images/C5.PNG" width=750>
+   <img src="Images/C5.PNG" width=750>
 
-7.
+7. Select Finish and boot up the machine
 
-<img src="Images/C6.PNG" width=750>
+   <img src="Images/C6.PNG" width=750>
