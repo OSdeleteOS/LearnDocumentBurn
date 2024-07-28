@@ -19,7 +19,7 @@ VM3 (AD Domain Services) - *Windows Server 2019*  w/ graphical interface
 
    <img src="Images/A1.PNG" width=750>
 
-3. Choose *Installer dis image file (iso)* and find path of *Ubuntu Server* ISO
+3. Choose *Installer disc image file (iso)* and find path of *Ubuntu Server* ISO
 
    <img src="Images/C2.PNG" width=750>
 
