@@ -10,6 +10,8 @@ VM2 (End-user) - *Ubuntu 22.04* w/ graphical interface
 
 VM3 (AD Domain Services) - *Windows Server 2019*  w/ graphical interface
 
+## Windows Server (VMware Setup) 
+
 ## Keycloak Server (VMware Setup)
 1. This virtual machine will be using *Ubuntu 22.04* CLI. The ISO can be downloaded from the [Ubuntu website](https://releases.ubuntu.com/jammy/)
 
@@ -40,7 +42,7 @@ VM3 (AD Domain Services) - *Windows Server 2019*  w/ graphical interface
    <img src="Images/C6.PNG" width=750>
 
 ## Keycloak Server (Keycloak Setup) 
-1. Installing Keycloak server
+Installing Keycloak server
 * Update packages
    ```sh
    sudo apt update 
@@ -73,4 +75,15 @@ VM3 (AD Domain Services) - *Windows Server 2019*  w/ graphical interface
 * You can access the dashboard using port 8080 and the host machines IP address, http://keycloak-server-ip:8080
 
   ## Keycloak Server (Keycloak Configuration)
+
+<img src="Images/C8.PNG" width=750>
+<img src="Images/C9.PNG" width=750>
+<img src="Images/C10.PNG" width=750>
+<img src="Images/C11.PNG" width=750>
+<img src="Images/C12.PNG" width=750>
+<img src="Images/C13.PNG" width=750>
+<img src="Images/C14.PNG" width=750>
+<img src="Images/C15.PNG" width=750>
+<img src="Images/C16.PNG" width=750>
+
 
