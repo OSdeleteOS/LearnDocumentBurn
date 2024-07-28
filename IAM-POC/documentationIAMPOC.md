@@ -45,4 +45,32 @@ VM3 (AD Domain Services) - *Windows Server 2019*  w/ graphical interface
    ```sh
    sudo apt update 
    ```
-*
+* Install openJDK 21 
+   ```sh
+   sudo apt install openjdk-21-jdk
+   ```
+* Copy raw link (.tar.gz) of the most current version of Keycloak on their [Github Repo](https://github.com/keycloak/keycloak/releases).
+
+    <img src="Images/C7.PNG" width=750>
+
+* Do a wget command for the rawlink you copied in order to get the keycloak.tar file
+   ```sh
+   wget https://github.com/keycloak/keycloak/releases/download/25.0.2/keycloak-25.0.2.tar.gz
+   ```
+* Using the tar command unzip the file using the flags -xvzf (extracts, lists out, decompresses and gets filenames)
+   ```sh
+   tar -xvzf keycloak-25.0.2.tar.gz
+   ```
+* Before you can access the dashboard you will have to setup the admin account by exporting environmental variables
+  ```sh
+  export KEYCLOAK_ADMIN=<choose a username>
+  export KEYCLOAK_ADMIN_PASSWORD=<something secure>
+  ```
+* Start the server in development mode in the background using the Keycloak shell command and &
+  ```sh
+  <file-path/bin/kc.sh start-dev &
+  ```
+* You can access the dashboard using port 8080 and the host machines IP address, http://keycloak-server-ip:8080
+
+  ## Keycloak Server (Keycloak Configuration)
+
