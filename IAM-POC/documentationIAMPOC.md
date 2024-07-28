@@ -10,7 +10,7 @@ VM2 (End-user) - *Ubuntu 22.04* w/ graphical interface
 
 VM3 (AD Domain Services) - *Windows Server 2019*  w/ graphical interface
 
-## Virtual Machine 1 Setup (Keycloak Server)
+## Keycloak Server (VMware Setup)
 1. This virtual machine will be using *Ubuntu 22.04* CLI. The ISO can be downloaded from the [Ubuntu website](https://releases.ubuntu.com/jammy/)
 
    <img src="Images/C1.PNG" width=750>
@@ -38,3 +38,11 @@ VM3 (AD Domain Services) - *Windows Server 2019*  w/ graphical interface
 7. Select Finish and boot up the machine
 
    <img src="Images/C6.PNG" width=750>
+
+## Keycloak Server (Keycloak Setup) 
+1. Installing Keycloak server
+* Update packages
+   ```sh
+   sudo apt update 
+   ```
+*
