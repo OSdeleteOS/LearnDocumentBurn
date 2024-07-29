@@ -11,6 +11,102 @@ VM2 (End-user) - *Ubuntu 22.04* w/ graphical interface
 VM3 (AD Domain Services) - *Windows Server 2019*  w/ graphical interface
 
 ## Windows Server (VMware Setup) 
+1. Top left to create a new virtual machine
+   
+   <img src="Images/A1.PNG" width=750>
+
+2. Choose "I will install the OS later"
+   
+   <img src="Images/A2.PNG" width=750>
+
+3. Click *Next*
+
+   <img src="Images/A3.PNG" width=750>
+
+4. Choose drive/location
+
+   <img src="Images/A4.PNG" width=750>
+  
+5. At least *60 GB's* needed.
+
+   <img src="Images/A5.PNG" width=750>
+  
+6. Click *Finish*
+
+   <img src="Images/A6.PNG" width=750>
+   
+7. Now go to the Windows Server VM settings and change the CD/DVD to use the Windows Server ISO 
+
+   <img src="Images/A9.PNG" width=750>
+   
+8. Go to the Windows Server VM location and edit the vmx file, change firmware to bios 
+
+   <img src="Images/A7.PNG" width=750>
+  
+9. Power your Windows Server VM on 
+
+   <img src="Images/A8.PNG" width=750>
+  
+## Windows Server (Active Directory Setup) 
+1. On Server Manager select *Manage* in the top right and select *Add Roles and Features*
+
+   <img src="Images/B1.PNG" width=750>
+
+2. Select *Next*
+  
+   <img src="Images/B2.PNG" width=750>
+
+3. Select *Role-based or feature-based installation*
+
+   <img src="Images/B3.PNG" width=750>
+
+4. Select *"Select a server from the server pool"*
+
+   <img src="Images/B4.PNG" width=750>
+
+5. Choose *AD Domain Services* and then select *Add Features*
+
+   <img src="Images/B5.PNG" width=750>
+
+6. Select *Install*
+
+   <img src="Images/B6.PNG" width=750>
+  
+7. Close out of installation when finished, then select the warning flag and *promote server to a DC*
+
+   <img src="Images/B7.PNG" width=750>
+
+8. Choose *Add a new forest* and create a *Root domain name*
+
+   <img src="Images/B8.PNG" width=750>
+
+9. Create a *DSRM* password*
+
+   <img src="Images/B9.PNG" width=750>
+  
+10. Create a *NetBIOS domain name*
+    
+    <img src="Images/B10.PNG" width=750>
+
+12. Keep defaults and select *Next*
+    
+    <img src="Images/B11.PNG" width=750>
+
+12. Proceed untill installation is complete and once restarted you have access to Active Directory Domain Service
+
+Adding Users to the Domain
+
+   * 
+
+     <img src="Images/B13.PNG" width=750>
+     
+   * 
+  
+     <img src="Images/B14.PNG" width=750>
+     
+   * 
+
+     <img src="Images/B15.PNG" width=750>
 
 ## Keycloak Server (VMware Setup)
 1. This virtual machine will be using *Ubuntu 22.04* CLI. The ISO can be downloaded from the [Ubuntu website](https://releases.ubuntu.com/jammy/)
