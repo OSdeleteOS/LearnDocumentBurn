@@ -74,16 +74,51 @@ Installing Keycloak server
   ```
 * You can access the dashboard using port 8080 and the host machines IP address, http://keycloak-server-ip:8080
 
-  ## Keycloak Server (Keycloak Configuration)
+## Keycloak Server (Keycloak Configuration)
 
-<img src="Images/C8.PNG" width=750>
-<img src="Images/C9.PNG" width=750>
-<img src="Images/C10.PNG" width=750>
-<img src="Images/C11.PNG" width=750>
-<img src="Images/C12.PNG" width=750>
-<img src="Images/C13.PNG" width=750>
-<img src="Images/C14.PNG" width=750>
-<img src="Images/C15.PNG" width=750>
-<img src="Images/C16.PNG" width=750>
+1. Create a new realm
+   * Go to the top left of the Keycloak dashboard and select the dropdown menu, then select *Create realm*
 
+     <img src="Images/C8.PNG" width=850>
+    
+   * Create a Realm name and select *Create*
 
+     <img src="Images/C9.PNG" width=850>
+    
+2. Create a Client for the End User
+   * Select *Create client* 
+
+     <img src="Images/C10.PNG" width=850>
+     
+   * Make sure client type is set to OpenID Connect, add a Client ID 
+
+     <img src="Images/C11.PNG" width=850>
+     
+   * Set Client authentication to *On* and skip the next page and create the client 
+
+     <img src="Images/C12.PNG" width=850>
+     
+   * Go to the Clients page on the left side of the dashboard and credentials and copy the *Client Secret* for later
+
+     <img src="Images/C13.PNG" width=850>
+    
+3. User Federation using Active Directory 
+   * Select *Add new provider*, and choose LDAP
+
+     <img src="Images/C14.PNG" width=850>
+    
+   * Use Command prompt on the Windows Server VM as an administrator and send a dsquery command
+
+   ```sh
+   dsquery user -name administrator
+   ```
+   * Choose the Active Directory for the Vendor, replace the Connection URL with the Windows Server IP. For the Bind
+     DN you will paste the output of the dsquery command. 
+
+     <img src="Images/C15.PNG" width=850>
+
+   * Select *WRITABLE* for the Edit mode, for the Users DN you will paste the output from the dsquery but remove the    first argument. The rest of the settings should have autofilled. 
+   
+      <img src="Images/C16.PNG" width=850>
+
+   ## Ubuntu End User (VMware Setup) 
