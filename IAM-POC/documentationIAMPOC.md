@@ -11,6 +11,8 @@ VM2 (End-user) - *Ubuntu 22.04* w/ graphical interface
 VM3 (AD Domain Services) - *Windows Server 2019*  w/ graphical interface
 
 ## Windows Server (VMware Setup) 
+A Windows Server will be needed in this PoC. You can get the *Windows Server 2019* iso from the [official website](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2019).
+
 1. Top left to create a new virtual machine
    
    <img src="Images/A1.PNG" width=750>
@@ -96,15 +98,15 @@ VM3 (AD Domain Services) - *Windows Server 2019*  w/ graphical interface
 
 Adding Users to the Domain
 
-   * w
+   * Open the Server Manager application, select tools in the top right and select *ADUC*
 
      <img src="Images/B13.PNG" width=750>
      
-   * w
+   * Right click Users, select New and choose User
   
      <img src="Images/B14.PNG" width=750>
      
-   * w
+   * Fill out user details. For the proof of concept it will simulate a student. 
 
      <img src="Images/B15.PNG" width=750>
 
