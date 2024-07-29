@@ -207,9 +207,10 @@ Installing Keycloak server
     
    * Use Command prompt on the Windows Server VM as an administrator and send a dsquery command
 
-   ```sh
-   dsquery user -name administrator
-   ```
+       ```sh
+       dsquery user -name administrator
+       ```
+       
    * Choose the Active Directory for the Vendor, replace the Connection URL with the Windows Server IP. For the Bind
      DN you will paste the output of the dsquery command. 
 
@@ -219,4 +220,72 @@ Installing Keycloak server
    
       <img src="Images/C16.PNG" width=850>
 
-   ## Ubuntu End User (VMware Setup) 
+## Ubuntu End User (VMware Setup) 
+1. This virtual machine will be using *Ubuntu 22.04 Desktop image*. The ISO can be downloaded from the [Ubuntu website](https://releases.ubuntu.com/jammy/)
+
+   <img src="Images/D5.PNG" width=750>
+
+2. Once installation is complete you can create a new virtual machine on VMware by selecting *Player* and then *New Virtual Machine*
+
+   <img src="Images/A1.PNG" width=750>
+
+3. Choose *Installer disc image file (iso)* and find path of *Ubuntu Desktop* ISO
+
+   <img src="Images/D1.PNG" width=750>
+
+4. Create username, full name and password
+
+   <img src="Images/D2.PNG" width=750>
+
+5. Name VM to End-User, and pick a file location that has room for 20GB
+
+   <img src="Images/D3.PNG" width=750>
+
+6. Make sure its at least 20GB's for the maximum disk size
+
+   <img src="Images/D4.PNG" width=750>
+
+7. Select Finish and boot up the machine
+
+## Ubuntu End User (Ubuntu Configuration)
+The end user machine will simulate a computer at the Cyber-Range. Pam_oauth2 will be used in order to redirect the user login requests to Keycloak (which will check AD). 
+
+1. Installing dependencies
+
+   * Update package repo
+     ```sh
+     sudo apt update
+     ```
+   * Install Dependencies
+     ```sh
+     sudo apt install build-essential libcurl4-openssl-dev libjson-c-dev libssl-dev 
+     ```
+     ```sh
+     sudo apt-get install libpam0g-dev
+     ```
+   * Install Git 
+     ```sh
+     sudo apt install git
+     ```
+     
+2. Installing pam_oauth2
+
+   * Use the git clone command
+     ```sh
+     git clone https://github.com/CyberDem0n/pam-oauth2
+     ```
+
+   * As the jsmn file doesnt copy over you will have to use the git clone repo command (replace empty file with this      one)
+     ```sh
+     git clone https://github.com/zserge/jsmn
+     ```
+   * Navigate to the pam_oauth2 directory and build it
+     ```sh
+     cd pam-oauth2
+     ```
+     ```sh
+     make
+     ```
+     ```sh
+     sudo make install 
+     ```
