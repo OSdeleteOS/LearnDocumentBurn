@@ -96,15 +96,15 @@ VM3 (AD Domain Services) - *Windows Server 2019*  w/ graphical interface
 
 Adding Users to the Domain
 
-   * 
+   * w
 
      <img src="Images/B13.PNG" width=750>
      
-   * 
+   * w
   
      <img src="Images/B14.PNG" width=750>
      
-   * 
+   * w
 
      <img src="Images/B15.PNG" width=750>
 
